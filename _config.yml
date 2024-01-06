@@ -1,0 +1,30 @@
+---
+title: The Poetry Factory
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: default
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+email: contact@peterlundblad.com
+description: 'The artistic Collaboration of Hope and Peter. '
+baseurl: ''
+url: ''
+instagram_username: 'poetryfactory.xyz'
+github_username: peterlundblad
+theme: minima
+plugins:
+- jekyll-feed

@@ -1,0 +1,752 @@
+---
+---
+
+{% include norms.css %}
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;600&display=swap');
+
+
+// this is the control for the JS loading feature
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate(0, 2rem);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+// this allows users with accessiblity pref to have motion turned off
+@media (prefers-reduced-motion: no-preference) {
+  .in-view {
+    // animation: fade .7s .3s both;
+    animation-name: fade;
+    animation-duration: .7s;
+    animation-delay: .1s;
+    animation-fill-mode: both;
+  }
+
+  .not-in-view {
+    opacity: 0;
+  }
+}
+
+//SCSS Variables
+$purple: #fff;
+//makes the main color darker or lighter
+$darkPurple: scale-color($purple, $lightness: -85%);
+$mainColor: $purple;
+$black: #000;
+$white: #fff;
+$grey: #181d3c;
+$shadow: drop-shadow(0px 2px 20px $mainColor);
+$background: $white;
+$border: 5px solid $mainColor;
+
+
+$gradient: linear-gradient(16deg, $grey 0, $background 100%);
+$typography: 'Zilla Slab', Courier, monospace;
+
+
+
+* {
+    box-sizing: border-box;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    transform: translate(0px, 3px);
+    
+
+
+  img {
+    transform: translateY(5px);
+    filter: invert(1);
+  
+  }
+
+    h2 {
+        font-size: 1.4em;
+        padding-left: .5em;
+        
+    }
+}
+
+.menu-toggle {
+  display: none;
+ }
+
+ .menu {
+  display: block;
+  z-index: 1;
+ 
+
+ }
+
+ .menu-esc {
+  display: none;
+ }
+
+header, body {
+    // background-color: $background;
+    background-image: url("../images/pcl-light-grad2b.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: $mainColor;
+    font-family: $typography;
+    font-weight: 100;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.container-hero {
+  // margin: 2rem 2rem 14rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+
+  img {
+    display: flex;
+    margin: 3rem auto 0rem auto;
+    width: 100%;
+  }
+
+}
+
+
+ .hamburger {
+  display: none;
+  filter: invert(1);
+ }
+
+.blog-grid {
+display: flex;
+flex-wrap: wrap;
+align-items: flex-end;
+justify-content: center;
+padding-bottom: 40px;
+}
+
+.blog-item {
+text-align: center;
+margin: 10px;
+background-color: $black;
+// box-shadow: 0 10px 20px 0 rgba(167, 185, 218, 0.3);
+border-radius: 5px;
+position: relative;
+z-index: -1;
+
+
+img {
+  margin: 0;
+  width: 500px;
+}
+
+}
+
+.blog-item h3 {
+opacity: 0;
+transition: opacity 0.6s;
+font-weight: 400;
+text-align: center;
+letter-spacing: 2px;
+// text-transform: uppercase;
+font-size: 1.8rem;
+color: #fff;
+pointer-events: none;
+position: absolute;
+width: 100%;
+top: 30%;
+
+}
+
+.blog-item:hover h3 {
+  opacity: 1;
+}
+
+
+.blog-item img:hover {
+  opacity: 0.3;
+  transition: opacity 0.5s, transform 0.6s ease-in-out;
+  // transform: scale(1.02);
+}
+
+
+
+a {
+    color: $white;
+}
+
+nav a:hover {
+  border-bottom: 5px solid #b7b7df;
+  padding-bottom: 0px;
+  transition: 0.3s;
+}
+
+nav {
+ 
+  a {
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 400;
+    color: $black;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+  }
+
+  li {
+    list-style: none;
+    display: list-item;
+  }
+
+}
+
+
+h1 {
+  font-family: $typography;
+  font-size: 7rem;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  line-height: normal;
+  letter-spacing: 0rem;
+  align-items: flex-end;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+h2 {
+  font-weight: 400;
+  text-align: center;
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+
+div.post {
+
+    p {
+        max-width: 700px;
+    }
+
+    img {
+        max-width: 1000px;
+    }
+
+}
+
+.PageNavigation {
+  font-size: 14px;
+  text-align: right;
+
+  img {
+    width: 30px;
+    display: inline;
+    margin-left: 10rem;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+}
+
+
+.PageNavigation .next {
+  text-align: right;
+}
+
+nav a.selected {
+ text-decoration: none;
+ border-bottom: $border;
+}
+
+.contact {
+  text-decoration: none;
+  border-bottom: $border;
+  font-size: 1.6rem;
+  color: $black;
+  font-weight: 300;
+}
+
+.contact:hover {
+  color: $mainColor;
+  border-bottom: 5px solid $black;
+}
+
+.row {
+display: -ms-flexbox; /* IE10 */
+display: flex;
+-ms-flex-wrap: wrap; /* IE10 */
+flex-wrap: wrap;
+// padding: 0 4px;
+}
+
+/* Create four equal columns that sit next to each other */
+.column {
+-ms-flex: 25%; /* IE10 */
+flex: 25%;
+max-width: 25%;
+padding: 0 6px;
+margin-bottom: 12px;
+}
+
+.column img {
+margin-top: 12px;
+vertical-align: middle;
+width: 100%;
+}
+
+
+
+.blog-content {
+display: block;
+}
+
+
+footer {
+    padding: 25px;
+    // background-color: $grey;
+    color: $mainColor;
+    // height: 20rem;
+  p {
+      padding-left: 0;
+    
+    }
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+  }
+  .footer-nav {
+    list-style: none;
+    float: left;
+    margin: -0.1em 3em 0 0;
+    text-align: right;
+    color: #fff;
+    border-right: 1px solid;
+    padding-right: 3em;
+  }
+  .footer-nav a:hover {
+    border-bottom: $border;
+    padding-bottom: 2px;
+    transition: padding-bottom 0.3s;
+    padding-left: initial;
+  }
+  .footer-nav * {
+    margin-bottom: 0.5rem;
+    padding-top: 0.2rem;
+    transform: translateY(2px);
+  }
+
+  #copyright {
+    // max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .ext-links {
+    display: flex;
+    align-items: center;
+  }
+  footer p {
+    padding-top: 2px;
+  }
+  .ext-links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 0.6rem;
+  }
+
+  #bd-email {
+    color: #666b7a;
+    height: 2.5rem;
+    width: 18em;
+    margin-bottom: 0.7rem;
+    border-radius: 12px;
+    border-style: none;
+    padding-left: 1em;
+  }
+
+  .button {
+    background-color: $mainColor;
+    box-shadow: 0 2px 2px 0 rgba(17, 64, 87, 0.1),
+      0 10px 20px 0 rgba(3, 48, 29, 0.09);
+    font-family: "Work Sans", Helvectia, Arial, sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 1rem 2em;
+    border-radius: 12px;
+    text-align: center;
+    display: inline-block;
+    transition-duration: 0.3s;
+    margin: 0 auto;
+    width: 30%;
+    max-width: 20rem;
+    min-width: 13em;
+    border-style: none;
+  }
+  .button:hover {
+    transform: scale(1.07, 1.07);
+  }
+
+  .ext-links img:hover {
+    filter: brightness(95%);
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+  }
+  .button:active {
+    box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .email-list .button {
+    display: list-item;
+    width: 18rem;
+    height: 2.5rem;
+    max-width: initial;
+    padding: initial;
+    margin: initial;
+    font-size: 1.2rem;
+  }
+
+
+
+  .email-list {
+    text-align: left;
+    display: inline-block;
+    margin: 3.75rem 1.2em 3.75rem 0;
+  }
+  .email-list h6 {
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 500;
+    margin: initial;
+  }
+  .email-list p {
+    margin: 0 0 0.8rem 0;
+    text-align: left;
+  }
+  label {
+    color: #7e8a9a;
+    margin-bottom: 0.25em;
+  }
+
+
+  #buttondown {
+    font-size: 0.7rem;
+    text-decoration: none;
+  }
+  .rule {
+    display: none;
+    border: 1px solid #fff;
+    margin: 90px auto;
+    max-width: 450px;
+  }
+  .mobile {
+    display: none;
+  }
+
+  
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+
+  @media (prefers-reduced-motion: no-preference) {
+    .in-view {
+      animation-name: fade;
+      animation-duration: 1.8s;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+    }
+  
+    .not-in-view {
+      opacity: 0;
+    }
+  }
+
+
+
+  .logo {
+  
+    h2 {
+        display: none;
+        
+    }
+  }
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  .footer-content {
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 770px;
+  }
+  
+
+  footer {
+  height: initial;
+  }
+
+  .email-list .button {
+   margin: 0.5rem auto;
+   width: 20rem;
+   height: 3.5rem;
+    }
+
+  #copyright {
+    margin: 3rem auto 0 auto;
+    text-align: center;
+  }
+  .button {
+    width: 50vw;
+    min-width: 10em;
+    font-size: 1.5rem;
+    font-family: $typography;
+    font-weight: 400;
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+  }
+  .social img {
+    width: 2.5rem;
+    margin: 0 .4rem;
+  }
+
+  .social a:hover {
+    border-bottom: none;
+  }
+  .email-list {
+    margin: 3.75rem auto 2rem auto;
+    text-align: center;
+    h6 {
+      text-align: center;
+    }
+  }
+
+  .ext-links {
+    transform: translateX(0);
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 8px;
+    // margin: 1rem auto;
+    font-size: 1.4rem;
+  }
+  .footer-nav {
+    margin: 1rem auto 2.3rem auto;
+    text-align: center;
+    color: #fff;
+    border: initial;
+    padding: 0;
+    width: 50vw;
+  }
+  .emailWidth img {
+    width: 375px;
+  }    
+  
+p {
+  text-align: right;
+  padding-left: 2rem;
+}
+
+
+#bd-email{
+width: 20rem;
+height: 3.5rem;
+text-align: center;
+padding: 0px;
+font-size: 1.2rem;
+  
+}
+
+}
+
+
+  
+  
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+
+.container {
+  padding: 0 1.2rem;
+}
+
+.container-hero {
+  margin: 2rem 1rem 14rem 1rem;
+}
+
+
+.logo {
+  
+  h2 {
+      display: none;
+      
+  }
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+.email-list {
+margin: 3.75rem auto 0.5rem auto;
+p {
+  text-align: center;
+}
+
+.button {
+  width: 100%;
+}
+
+}
+.contact {
+  font-size: 1.3rem;
+}
+
+footer {
+  padding: 0;
+} 
+
+#bd-email {
+height: 3.5rem;
+width: 100%;
+
+}
+
+
+
+}
+
+@media screen and (max-width: 450px) {
+
+   .menu {
+    background-color: $darkPurple;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-10%);
+    display: none;
+   }
+
+  nav {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    height: 100vh;
+    flex-direction: column;
+    gap: 40px;
+    transform: translateY(-3%);
+
+    a {
+      font-size: 3rem;
+      margin: 0;
+      color: $white;
+   }
+    ul {
+      flex-flow: column;
+      align-items: center;
+      margin-left: -1.5rem;
+      margin-top: 5rem;
+       
+    }
+
+    li {
+      margin-bottom: 3rem;
+    }
+
+  }
+   nav a:hover {
+    border-bottom: $border;
+    padding-bottom: 2px;
+    transition: padding-bottom 0.3s;
+    padding-left: initial;
+   }
+  
+
+   .menu-esc {
+      display: block;
+      position: absolute;
+      right: 3.5%;
+      top: 7%;
+      z-index: 1;
+   }
+
+.menu-esc:hover {
+  filter: brightness(95%);
+  transform: scale(1.2);
+}
+
+.hamburger {
+  display: block;
+  transform: translate(0px, 3px);
+
+ }
+
+   .hamburger {
+    display: block;
+    transform: translate(0px, 3px);
+
+   }
+
+.logo {
+z-index: 2;  
+transform: translate(0px, 0px);
+}
+
+  .footer-content {
+    margin: 0 1rem;
+  }
+  
+.footer-nav li {
+  margin: 2.5rem 0;
+  font-size: 2.5rem;
+}
+
+}
