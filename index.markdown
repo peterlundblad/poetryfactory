@@ -9,8 +9,9 @@ permalink: "/"
 
 # The Poetry Factory is a creative collaboration between Hope and Peter Lundblad, blending their diverse talents in art, design, & hospitality. 
 
-With Hope’s passion for curating art exhibitions, fostering retreats, and creating spaces in their home for artists in need of refreshment, and Peter’s expertise in brand design, calligraphy, and cooking, they craft poetic moments through art retreats, wedding design, and photography. 
+With Hope’s focus on curating exhibitions, fostering retreats, and creating artist sanctuaries, and Peter’s expertise in brand design, calligraphy, and cuisine, they craft poetic moments through art retreats, branding, and bespoke wedding services.
 
 They are currently raising support to bring these dreams to life and enrich the creative journeys of others.
 
-<a class="button" href="https://fundraising.fracturedatlas.org/the-poetry-factory/general_support">Donate Now</a>
+<a class="button" href="https://fundraising.fracturedatlas.org/the-poetry-factory/general_support">Donate</a>
+<!-- <a class="button secondary" href="#">Contact</a> -->

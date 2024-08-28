@@ -418,14 +418,25 @@ footer {
     display: inline-block;
     transition-duration: 0.3s;
     margin: 1.5rem auto;
-    width: 30%;
+    width: 40%;
     max-width: 20rem;
     min-width: 13em;
     border-style: none;
+
   }
+
+  .button.secondary {
+    border: $mainColor;
+    background-color: transparent;
+    border-style: solid;
+    color: $mainColor;
+    font-weight: 700;
+  }
+
   .button:hover {
     transform: scale(1.07, 1.07);
   }
+
 
   .ext-links img:hover {
     filter: brightness(95%);
@@ -503,6 +514,7 @@ footer {
 
 h1 {
   font-size: 4rem;
+  text-align: left;
 }
 
   .logo {
@@ -539,11 +551,12 @@ h1 {
     text-align: center;
   }
   .button {
-    width: 50vw;
+    width: 40vw;
     min-width: 10em;
     font-size: 1.5rem;
     font-family: $typography;
     font-weight: 400;
+    // margin: 1rem 1rem;
   }
   .social {
     display: flex;
@@ -587,8 +600,8 @@ h1 {
   }    
   
 p {
-  text-align: center;
-  // padding-left: 2rem;
+  text-align: left;
+  font-size: 1.6rem;
 }
 
 
@@ -634,8 +647,9 @@ font-size: 1.2rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   margin: 1rem 0 1rem 0;
+  text-align: left;
 }
 
 
