@@ -254,7 +254,7 @@ h2 {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   // margin: 2rem 14rem;
   text-align: left;
   letter-spacing: 2px;
@@ -429,7 +429,7 @@ footer {
     text-align: center;
     display: inline-block;
     transition-duration: 0.3s;
-    margin: 1.5rem auto;
+    // margin: 1.5rem auto;
     width: 40%;
     max-width: 20rem;
     min-width: 13em;
@@ -656,7 +656,7 @@ font-size: 1.2rem;
 }
 
 .container-hero {
-  max-width: 95vw;
+  max-width: 90vw;
   height: fit-content;
 }
 
@@ -675,6 +675,9 @@ h1 {
   text-align: left;
 }
 
+p {
+  font-size: 1.3rem;
+}
 
 .email-list {
 margin: 3.75rem auto 0.5rem auto;
