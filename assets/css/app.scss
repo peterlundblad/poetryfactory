@@ -95,7 +95,7 @@ $typography: 'Zilla Slab', Courier, monospace;
 
 header, body {
     // background-color: $background;
-    background-image: url("../images/pcl-light-grad2b.jpg");
+    background-image: url("../images/pcl-light-grad2b.webp");
     background-repeat:no-repeat;
     background-size: cover;
     color: $white;
@@ -115,13 +115,11 @@ header, body {
 }
 
 .container-hero {
-  // margin: 2rem 2rem 14rem 2rem;
-  // display: flex;
+
   align-items: center;
   justify-content: center;
-  // height: 90vh;
-  // max-width: 80vw;
-  margin: 3rem auto;
+  margin: 16rem auto;
+  max-width: 80vw;
 
   img {
     display: flex;
@@ -498,7 +496,9 @@ footer {
     }
   }
 
-
+h1 {
+  font-size: 4rem;
+}
 
   .logo {
   
@@ -630,13 +630,10 @@ font-size: 1.2rem;
 
 h1 {
   font-size: 3rem;
-  margin: 6rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
-// p {
-//   margin-left: 1rem;
-//   padding-left: 1rem;
-// }
+
 .email-list {
 margin: 3.75rem auto 0.5rem auto;
 p {
