@@ -13,5 +13,5 @@ With Hope’s focus on curating exhibitions, fostering retreats, and creating ar
 
 They are currently raising support to bring these dreams to life and enrich the creative journeys of others.
 
-<a class="button" href="https://fundraising.fracturedatlas.org/the-poetry-factory/general_support">Donate</a>
+<a class="button" href="https://fundraising.fracturedatlas.org/the-poetry-factory/general_support" target="_blank">Donate</a>
 <!-- <a class="button secondary" href="#">Contact</a> -->

@@ -54,6 +54,9 @@ $border: 5px solid $mainColor;
 
 $gradient: linear-gradient(16deg, $grey 0, $background 100%);
 $typography: 'Zilla Slab', Courier, monospace;
+$buttonType: 'Inter', Helvetica, Sans Serif;
+
+
 
 
 
@@ -412,11 +415,14 @@ footer {
     background-color: $mainColor;
     box-shadow: 0 2px 2px 0 rgba(17, 64, 87, 0.1),
       0 10px 20px 0 rgba(3, 48, 29, 0.09);
-    font-family: $typography;
+    font-family: $buttonType;
+    font-optical-sizing: auto;
+    // text-transform: uppercase;
+    font-style: normal;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.9em;
-    letter-spacing: 1px;
+    // letter-spacing: 1px;
     color: #fff;
     padding: 1rem 2em;
     border-radius: 12px;
@@ -428,6 +434,7 @@ footer {
     max-width: 20rem;
     min-width: 13em;
     border-style: none;
+    text-shadow: none;
 
   }
 
@@ -500,7 +507,16 @@ footer {
     display: none;
   }
 
-  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1024px) {
+
+  .container-hero {
+    justify-content: start;
+    height: 100%;
+  }
+
+
+}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
@@ -654,8 +670,8 @@ font-size: 1.2rem;
 }
 
 h1 {
-  font-size: 2.4rem;
-  margin: 1rem 0 1rem 0;
+  font-size: 3rem;
+  margin: 4rem 0 1rem 0;
   text-align: left;
 }
 
