@@ -576,12 +576,12 @@ h1 {
     text-align: center;
   }
   .button {
-    width: 40vw;
-    min-width: 10em;
+    width: 100%;
+    min-width: 80vw;
     font-size: 1.5rem;
     font-family: $typography;
     font-weight: 400;
-    // margin: 1rem 1rem;
+    margin-bottom: 1rem;
   }
   .social {
     display: flex;
