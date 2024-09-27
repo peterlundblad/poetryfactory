@@ -346,10 +346,9 @@ display: block;
 
 
 footer {
-    padding: 25px;
-    // background-color: $grey;
-    color: $mainColor;
-    // height: 20rem;
+    color: $white;
+    font-family: $buttonType;
+   
   p {
       padding-left: 0;
     
@@ -436,15 +435,18 @@ footer {
     min-width: 13em;
     border-style: none;
     text-shadow: none;
+    box-sizing: border-box; /* Ensure padding and border are included */
+    margin-right: 1rem;
 
   }
 
   .button.secondary {
-    border: $mainColor;
     background-color: transparent;
-    border-style: solid;
     color: $mainColor;
+    border: 3px solid $mainColor; /* Ensure consistent border thickness */
     font-weight: 700;
+    box-sizing: border-box; /* Keep border inside the element */
+    padding: calc(1rem - 2px) 2em; /* Adjust padding to account for border */
   }
 
   .button:hover {
