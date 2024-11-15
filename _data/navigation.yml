@@ -1,0 +1,8 @@
+- name: About
+  link: /
+- name: Snail Mail Club
+  link: /snailmail/
+# - name: Blog
+#   link: /blog/
+- name: Contact
+  link: /contact/

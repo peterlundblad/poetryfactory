@@ -5,49 +5,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:wght@100..900&display=swap');
 
-
-// this is the control for the JS loading feature
-@keyframes fade {
-  0% {
-    opacity: 0;
-    transform: translate(0, 2rem);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-}
-// this allows users with accessiblity pref to have motion turned off
-@media (prefers-reduced-motion: no-preference) {
-  .in-view {
-    // animation: fade .7s .3s both;
-    animation-name: fade;
-    animation-duration: .7s;
-    animation-delay: .1s;
-    animation-fill-mode: both;
-  }
-
-  .not-in-view {
-    opacity: 0;
-  }
-}
 
 //SCSS Variables
 $yellow: #F9AB13;
 $blue: #478ca1;
 $purple: purple;
 
+$mainColor: $yellow;
+
 //makes the main color darker or lighter
-$darkPurple: scale-color($purple, $lightness: -85%);
-$mainColor: $blue;
-$black: #000;
+$darkMain: scale-color($mainColor, $lightness: -85%);
+
+$black: #3B4462;
 $white: #fff;
-$grey: #181d3c;
+$grey: #323a53;
 $shadow: drop-shadow(0px 2px 20px $mainColor);
 $background: $white;
 $border: 5px solid $mainColor;
@@ -55,7 +28,7 @@ $border: 5px solid $mainColor;
 
 $gradient: linear-gradient(16deg, $grey 0, $background 100%);
 $typography: 'Zilla Slab', Courier, monospace;
-$buttonType: 'Inter', Helvetica, Sans Serif;
+$buttonType: 'Work Sans', Helvetica, Sans Serif;
 
 
 
@@ -68,13 +41,13 @@ $buttonType: 'Inter', Helvetica, Sans Serif;
   .logo {
     display: flex;
     align-items: center;
-    transform: translate(0px, 3px);
-    
+    transform: translate(0px, 3px);   
 
 
   img {
     transform: translateY(5px);
-    filter: invert(1);
+    width: 4rem;
+
   
   }
 
@@ -100,38 +73,39 @@ $buttonType: 'Inter', Helvetica, Sans Serif;
   display: none;
  }
 
-header, body {
-    // background-color: $background;
-    background-image: url("../images/pcl-light-grad2b.webp");
+body {
+    background-image: url("/assets/images/gradients_light.webp");
     background-repeat:no-repeat;
     background-size: cover;
     background-position: right;
-    color: $white;
+    color: $black;
     font-family: $typography;
     font-weight: 100;
     height: 100%;
     margin: 0;
-    text-shadow: 0px 2px 2px #040f2924;
+    // text-shadow: 0px 2px 2px #040f2924;
+
 }
 
-// .container {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//     margin: 2rem auto;
-//     padding: 0 2rem;
-// }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
 
 .container-hero {
   display: flex;
   align-items: start;
-  justify-content: center;
-  margin: 0 auto;
+  // justify-content: center;
+  margin: 10rem auto 0 auto;
   max-width: 80vw;
   flex-direction: column;
-  height: 100vh;
-  min-height: 100vh;
+  // height: 100vh;
+  min-height: 70vh;
 
 
   img {
@@ -251,17 +225,23 @@ h1 {
 h2 {
   font-weight: 400;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 p {
   font-size: 1.4rem;
-  // margin: 2rem 14rem;
+  margin: .5rem 0;
   text-align: left;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: 400;
 }
 
+ul {
+  font-size: 1.4rem;
+text-align: left;
+letter-spacing: 1px;
+font-weight: 400;
+}
 
 div.post {
 
@@ -348,18 +328,30 @@ display: block;
 footer {
     color: $white;
     font-family: $buttonType;
+    background-color: $grey;
+    padding-top: 3rem;
    
   p {
       padding-left: 0;
+      font-size: 1rem;
+      margin: 0 0 .6rem 0;
+      letter-spacing: 1px;
     
     }
+
+  h6 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0 0 .6rem 0;
+  }  
   }
   .footer-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 2rem;
+    margin: 1rem auto 2rem auto;
+    max-width: 80vw;
   }
   .footer-nav {
     list-style: none;
@@ -383,10 +375,10 @@ footer {
   }
 
   #copyright {
-    // max-width: 1200px;
     margin: 0 auto;
     font-size: 0.7rem;
     text-align: center;
+    padding-bottom: 1rem;
   }
   .ext-links {
     display: flex;
@@ -399,6 +391,7 @@ footer {
     text-decoration: none;
     color: #fff;
     margin: 0 0.6rem;
+    font-weight: 300;
   }
 
   #bd-email {
@@ -417,19 +410,16 @@ footer {
       0 10px 20px 0 rgba(3, 48, 29, 0.09);
     font-family: $buttonType;
     font-optical-sizing: auto;
-    // text-transform: uppercase;
     font-style: normal;
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.9em;
-    // letter-spacing: 1px;
+    font-size: 0.8em;
     color: #fff;
     padding: 1rem 2em;
     border-radius: 12px;
     text-align: center;
     display: inline-block;
     transition-duration: 0.3s;
-    // margin: 1.5rem auto;
     width: 40%;
     max-width: 20rem;
     min-width: 13em;
@@ -444,7 +434,7 @@ footer {
     background-color: transparent;
     color: $mainColor;
     border: 3px solid $mainColor; /* Ensure consistent border thickness */
-    font-weight: 700;
+    font-weight: 600;
     box-sizing: border-box; /* Keep border inside the element */
     padding: calc(1rem - 2px) 2em; /* Adjust padding to account for border */
   }
@@ -473,7 +463,9 @@ footer {
     font-size: 1.2rem;
   }
 
-
+.clear .button {
+  width: 18rem;
+}
 
   .email-list {
     text-align: left;
@@ -481,7 +473,7 @@ footer {
     margin: 3.75rem 1.2em 3.75rem 0;
   }
   .email-list h6 {
-    font-size: 1.3em;
+    font-size: 2.3em;
     color: #fff;
     font-weight: 500;
     margin: initial;
@@ -563,6 +555,7 @@ h1 {
 
   footer {
   height: initial;
+  
   }
 
   .email-list .button {
@@ -611,6 +604,7 @@ h1 {
     margin-top: 8px;
     // margin: 1rem auto;
     font-size: 1.4rem;
+
   }
   .footer-nav {
     margin: 1rem auto 2.3rem auto;
@@ -618,7 +612,8 @@ h1 {
     color: #fff;
     border: initial;
     padding: 0;
-    width: 50vw;
+    // width: 50vw;
+    
   }
   .emailWidth img {
     width: 375px;
@@ -627,6 +622,7 @@ h1 {
 p {
   text-align: left;
   font-size: 1.6rem;
+  
 }
 
 
@@ -659,7 +655,7 @@ font-size: 1.2rem;
 }
 
 .container-hero {
-  max-width: 90vw;
+  // max-width: 90vw;
   height: fit-content;
 }
 
@@ -698,7 +694,8 @@ p {
 }
 
 footer {
-  padding: 0;
+  padding: 3rem 0 0 0;
+  
 } 
 
 #bd-email {
@@ -714,7 +711,7 @@ width: 100%;
 @media screen and (max-width: 450px) {
 
    .menu {
-    background-color: $darkPurple;
+    background-color: $grey;
     width: 100%;
     height: 100%;
     position: fixed;

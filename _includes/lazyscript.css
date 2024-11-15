@@ -1,0 +1,29 @@
+// this is the control for the JS loading feature
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate(0, 2rem);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+// this allows users with accessiblity pref to have motion turned off
+@media (prefers-reduced-motion: no-preference) {
+  .in-view {
+    // animation: fade .7s .3s both;
+    animation-name: fade;
+    animation-duration: .7s;
+    animation-delay: .1s;
+    animation-fill-mode: both;
+  }
+
+  .not-in-view {
+    opacity: 0;
+  }
+}

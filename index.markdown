@@ -7,9 +7,11 @@ layout: default
 permalink: "/"
 ---
 
-# The Poetry Factory is a creative venture between Hope and Peter Lundblad, blending their diverse talents in art, design, & hospitality. 
+# Vive la Renaissance! 
 
-With Hope’s focus on curating exhibitions, fostering retreats, and creating artist sanctuaries, and Peter’s expertise in brand design, calligraphy, and cuisine, they craft poetic moments through art retreats, branding, and bespoke wedding services.
+The Poetry Factory is a creative collaboration between Hope and Peter Lundblad, blending their diverse talents as artists, photographers, poets, and designers. 
+
+With Hope’s passion for curating art exhibitions, fostering retreats, and creating spaces in their home for artists in need of refreshment, and Peter’s expertise in brand design, calligraphy, and cooking, they craft poetic moments through art retreats, wedding design, and photography.
 
 They are currently raising support to bring these dreams to life and enrich the creative journeys of others.
 
