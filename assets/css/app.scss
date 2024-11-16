@@ -608,6 +608,24 @@ h1 {
   }
   
 
+.image-container {
+  .image-row {
+    flex-flow: column;
+    max-width: 100%;
+  
+    img {
+      max-width: 100%;
+      overflow: initial;
+    }
+  }
+
+}  
+
+
+#square-image {
+  max-width: 100%;
+}
+
   footer {
   height: initial;
   
