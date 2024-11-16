@@ -95,7 +95,10 @@ body {
     flex-wrap: wrap;
     margin: 2rem auto;
     padding: 0 2rem;
-}
+
+  }
+  
+  
 
 .container-hero {
   display: flex;
@@ -106,14 +109,36 @@ body {
   flex-direction: column;
   // height: 100vh;
   min-height: 70vh;
+    
+    }
 
+.image-container {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 2rem 0;
 
+  /* Create row of images that sit next to one another */
+.image-row {
+  display: flex;
+  justify-content: space-between; /* Spreads images evenly */
+  gap: 1rem; /* Space between images */
+  max-width: 100%; /* Prevents the row from exceeding the viewport */
+  overflow: hidden; /* Hides anything that overflows */
+  
   img {
-    display: flex;
-    margin: 3rem auto 0rem auto;
-    width: 100%;
-  }
+    flex: 1; /* Ensures images grow/shrink equally */
+    max-width: calc(27.5% - 1rem); /* Make each image take up roughly 1/3 of the row, subtracting gap space */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Optional: Crops images if needed */
+  } 
 
+}
+
+}
+
+#square-image {
+  max-width: calc(45% - 1rem);
 }
 
 
@@ -449,6 +474,10 @@ footer {
     transform: scale(1.07, 1.07);
   }
 
+
+.button-group {
+  margin-top: 1rem;
+}
 
   .ext-links img:hover {
     filter: brightness(95%);
